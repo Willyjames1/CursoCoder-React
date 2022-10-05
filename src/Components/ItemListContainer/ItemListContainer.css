@@ -1,0 +1,11 @@
+.ItemLC {
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+.ItemLC-h2 {
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+}

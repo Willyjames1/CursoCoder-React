@@ -1,0 +1,31 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(206, 185, 215);
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 90%;
+}
+
+.App-header {
+  background-color: coral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+}
+
+.App-B1 {
+  background-color: rgb(206, 185, 215);
+  display: flex;
+
+  
+}

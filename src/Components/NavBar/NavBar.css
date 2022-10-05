@@ -1,0 +1,31 @@
+.NavBar {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100%;
+}
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.NavBar-B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding: 20px;
+}
+.NavBar-B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+.NavBar-B3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2vh;
+}
