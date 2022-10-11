@@ -9,7 +9,7 @@ const ItemList = () => {
 const traerProductos = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(fundas)
-    }, 2000);
+    }, 0);
 });
 
 const traerProductosBD = async () => {
@@ -30,7 +30,9 @@ return (
     <div className="product-div-container">
         {products.map((producto) => {
         return (
+
             <div key={producto.id}>
+                
                 <Item            
                 img={producto.img}
                 id={producto.id}

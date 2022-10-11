@@ -1,0 +1,33 @@
+.ItemDetail-Card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 25px;
+    justify-content: center;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+
+
+.ItemDetail-Card-Modelo option {
+    display: inline-flex;
+    text-align: center;
+    color: blueviolet;
+}
+
+
+.ItemDetail-Card-Img1 {
+    padding: 50px;
+    border-radius: 100px;
+    border-color: rgb(197, 163, 120);
+    border-style:double;
+}
+
+.ItemDetail-Card-Precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: slategrey;
+    padding: 15px;
+}
+
