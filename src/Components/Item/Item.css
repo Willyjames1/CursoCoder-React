@@ -1,40 +1,47 @@
 .product-card {
-    display: grid;
-    margin: 25px;
-    text-align: center;
-    justify-content: center;
-    padding-bottom: 20px;
-    border-radius: 30px;
-    background-color: rgb(210, 214, 214);
-    border: 2px solid teal;
-    max-height: fit-content;
-    
+  display: grid;
+  margin: 25px;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  background-color: gainsboro;
+  border: 2px solid peru;
+  max-height: fit-content;
 }
 
-.product-card-buttomAdd {
-    background-color: rgb(234, 185, 234);
-    border-color: rgb(171, 171, 171);
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 10px;
+.product-card-nombre {
+  color: rgb(228, 149, 69);
+  text-shadow: 2px 2px white;
 }
 
 .product-card-img {
-    border-radius: 20px;
-    border-bottom: 3px rgb(234, 185, 234) solid;
-    align-items: center;
-    justify-content: center;
+  border-radius: 20px;
+  border-bottom: 4px peru solid;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-card-price {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+  padding-top: 10px;
 }
 
-.product-card-option{
-    width: fit-content;
-    margin: auto;
-    margin-top: 5px;
-    text-align: center;
+.product-card-option {
+  width: fit-content;
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
 
+.product-card-buttomAdd {
+  background-color: peru;
+  color: white;
+  border-color: rgb(171, 171, 171);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
 }

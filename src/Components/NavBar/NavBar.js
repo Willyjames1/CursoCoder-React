@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="NavBar">
-      
+
       <div className="NavBar-B1">
-        <a href={"/"}>Categories</a>
-        <a href={"/"}>DEALS!</a>
+        <Link to={"/SoftCases"} className="NavBar-B1-Cat1">Soft Cases</Link>
+        <Link to={"/MaxProtectionCases"} className="NavBar-B1-Cat2">Max Protection</Link>
       </div>
 
       <div className="NavBar-B2">
-        <a href={"/"}>The Custom Shop</a>
+        <Link to={"/"}>The Custom Shop</Link>
       </div>
 
       <div className="NavBar-B3">

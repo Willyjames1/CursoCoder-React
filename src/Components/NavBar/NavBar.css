@@ -30,3 +30,21 @@ a {
   justify-content: flex-end;
   padding-right: 2vh;
 }
+
+.NavBar-B1-Cat1 {
+  padding-right: 10px;
+}
+
+.NavBar-B1-Cat1:hover {
+  padding-right: 10px;
+  color: dimgrey;
+}
+
+.NavBar-B1-Cat2 {
+  padding-right: 10px;
+}
+
+.NavBar-B1-Cat2:hover {
+  padding-right: 10px;
+  color: dimgrey;
+}

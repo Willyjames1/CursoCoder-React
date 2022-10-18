@@ -1,33 +1,68 @@
 .ItemDetail-Card {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding-top: 25px;
-    justify-content: center;
-    text-align: center;
-    background-color: antiquewhite;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100%;
+  background-color: antiquewhite;
+  align-items: center;
 }
-
-
-
-.ItemDetail-Card-Modelo option {
-    display: inline-flex;
-    text-align: center;
-    color: blueviolet;
+.ItemDetail-Card-ImgBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .ItemDetail-Card-Img1 {
-    padding: 50px;
-    border-radius: 100px;
-    border-color: rgb(197, 163, 120);
-    border-style:double;
+  width: 60%;
+  margin: 15px;
+  padding: 5px;
+  border-radius: 50px;
+  border: 5px rgb(197, 163, 120);
+  border-style: double;
+  box-shadow: 16px 15px gainsboro;
+}
+
+.ItemDetail-Card-ModelB {
+  display: flex;
+  justify-content: center;
+}
+
+.ItemDetail-Card-Model {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: blueviolet;
 }
 
 .ItemDetail-Card-Precio {
-    font-size: 18px;
-    font-weight: bold;
-    color: slategrey;
-    padding: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: slategrey;
+  padding: 15px;
 }
 
+.ItemDetail-Card-BtnAdd0 {
+  display: flex;
+}
+
+.ItemDetail-Card-BtnAdd {
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  background-color: peru;
+  color: white;
+  border-color: rgb(171, 171, 171);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.ItemDetail-Card-BtnAdd:hover {
+  background-color: rgb(166, 109, 51);
+}
+.ItemDetail-Card-BtnAdd:focus {
+  background-color: rgb(150, 97, 45);
+}

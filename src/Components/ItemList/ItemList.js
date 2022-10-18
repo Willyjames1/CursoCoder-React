@@ -2,49 +2,37 @@ import Item from "../Item/Item";
 import "./ItemList.css"
 import { fundas } from "../Data/data";
 import { useEffect, useState } from "react";
-
 const ItemList = () => {
-    const [products, setProducts] = useState ([]);
+    const [loading, setLoading] = useState(false)
 
-const traerProductos = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(fundas)
-    }, 0);
-});
 
-const traerProductosBD = async () => {
-    try {
-        const BaseDatos = await traerProductos;
-        setProducts (BaseDatos);
-    } catch (error) {
-    console.log(error);
-    }
-}
 
-useEffect(() => {
-    
-    traerProductosBD();
-},[]); 
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(true)
+        }, 2000);
+    }, [])
 
-return (
-    <div className="product-div-container">
-        {products.map((producto) => {
-        return (
+    return (
+        <>{loading && <div className="product-div-container">
+            {fundas.map((producto) => {
+                return (
 
-            <div key={producto.id}>
-                
-                <Item            
-                img={producto.img}
-                id={producto.id}
-                precio={producto.precio}
-                modelo={producto.modelo}
-                />
-            </div>
-        );
-        })
-        }
-    </div>
-)
+                    <div key={producto.id}>
+
+                        <Item
+                            nombre={producto.nombre}
+                            img={producto.img}
+                            id={producto.id}
+                            precio={producto.precio}
+                            modelo={producto.modelo}
+                        />
+                    </div>
+                );
+            })
+            }
+        </div>}</>
+    )
 }
 
 
