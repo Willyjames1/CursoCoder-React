@@ -2,10 +2,8 @@
   height: 100%;
   width: 100%;
   display: grid;
-}
-.ItemLC-h2 {
-  color:peru;
-  font-weight: bold;
-  text-align: center;
-  justify-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: 10vh auto;
+  grid-row-gap: 1.5vh;
+  align-content: flex-start;
 }

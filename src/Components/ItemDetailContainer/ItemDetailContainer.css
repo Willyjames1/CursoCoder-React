@@ -3,18 +3,65 @@
   height: 80%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100%;
+  grid-template-rows: 100vh 100%;
   background-color: antiquewhite;
   align-items: center;
 }
+
+.ItemDetail-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.ItemDetail-Card-notDisplayed {
+  display: none;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid peru;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .ItemDetail-Card-ImgBack {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.ItemDetail-Card-Info {
+  justify-content: center;
+  align-items: center;
+}
+
 .ItemDetail-Card-Img1 {
-  width: 60%;
+  width: 160%;
   margin: 15px;
   padding: 5px;
   border-radius: 50px;
@@ -33,6 +80,13 @@
   text-align: center;
   justify-content: center;
   color: blueviolet;
+}
+
+.ItemDetail-Card-Quantity {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
 }
 
 .ItemDetail-Card-Precio {

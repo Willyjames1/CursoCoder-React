@@ -1,32 +1,19 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 import "./Item.css"
 
-
-
-
-
-const Item = ({ id, nombre, precio, modelo, img }) => {
+const Item = ({ id, nombre, precio, img }) => {
 
   return (
-    <div className='product-card'>
-      <Link to={`/item/${id}`} >
-        <h2 className='product-card-nombre'>{nombre}</h2>
-        <img className='product-card-img' src={img} alt='' />
-      </Link>
-      <select className='product-card-option'>
-        <option>Seleccionar Modelo</option>
-        <option>{modelo[0]}</option>
-        <option>{modelo[1]}</option>
-        <option>{modelo[2]}</option>
 
-      </select>
-      <span className='product-card-price'>${precio}</span>
-      <button className='product-card-buttomAdd'>Add to cart</button>
-
-
-
-    </div>
+    <Link to={`/item/${id}`} className='product-card'>
+      <img className='product-card-img' src={img} alt='' />
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="product-card-svg" viewBox="0 0 16 16">
+        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+      </svg>
+      <h2 className='product-card-nombre'>{nombre}</h2>
+      <h2 className='product-card-price'>${precio}</h2>
+    </Link>
   )
 }
 

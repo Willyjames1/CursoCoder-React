@@ -1,11 +1,17 @@
 import "./SoftPage.css"
-import { fundas } from "../../Components/Data/data"
 import React, { useEffect, useState } from 'react'
 import Item from "../../Components/Item/Item"
-
-
+import { getFirestore, collection, getDocs } from "firebase/firestore"
 
 const SoftPage = () => {
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        const queryDB = getFirestore()
+        const queryCollection = collection(queryDB, 'productos')
+        getDocs(queryCollection)
+            .then((res) => setData(res.docs.map((product) => ({ id: product.id, ...product.data() }))))
+    }, [])
 
     const [loading, setLoading] = useState(false)
 
@@ -13,24 +19,28 @@ const SoftPage = () => {
         setTimeout(() => {
             setLoading(true);
         }, 1000);
-    })
-    return (
-        <>{loading && <div className="product-div-container">
-            {fundas.filter((item) => item.categoria === "Soft").map((item) => {
-                return (
-                    <div key={item.id}>
-                        <Item
-                            nombre={item.nombre}
-                            img={item.img}
-                            id={item.id}
-                            precio={item.precio}
-                            modelo={item.modelo}
-                        />
-                    </div>
-                )
-            })}
+    }, [])
 
-        </div>}</>
+    return (
+        <div className="SoftPage-background">
+            <div></div>
+            {loading && <div className="SoftPage-container">
+                {data.filter((item) => item.categoria === "Soft").map((item) => {
+                    return (
+                        <div key={item.id}>
+                            <Item
+                                nombre={item.nombre}
+                                img={item.img}
+                                id={item.id}
+                                precio={item.precio}
+                                modelo={item.modelo}
+                            />
+                        </div>
+                    )
+                })}
+
+            </div>}
+        </div>
     )
 }
 

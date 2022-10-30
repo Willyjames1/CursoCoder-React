@@ -1,3 +1,26 @@
 .Cart {
   cursor: pointer;
 }
+
+.Cart-svg {
+  height: 3vh;
+  width: auto;
+  color: white;
+}
+
+.Cart-svg:hover {
+  color: rgb(211, 211, 211);
+}
+
+.Cart-count {
+  background-color: whitesmoke;
+  font-size: 15px;
+  margin-left: 5px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

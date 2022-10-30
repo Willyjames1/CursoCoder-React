@@ -1,10 +1,22 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { Contexto } from "../../Context/CartContext";
+import { useContext } from "react";
+import Cart from "../Cart/Cart";
+
 
 const NavBar = () => {
+
+  const { CartStatus, setCartStatus } = useContext(Contexto)
+
+  console.log(CartStatus);
+
+
   return (
     <div className="NavBar">
+
+      <Cart />
 
       <div className="NavBar-B1">
         <Link to={"/SoftCases"} className="NavBar-B1-Cat1">Soft Cases</Link>
@@ -15,8 +27,10 @@ const NavBar = () => {
         <Link to={"/"}>The Custom Shop</Link>
       </div>
 
-      <div className="NavBar-B3">
-        <CartWidget />
+      <div className="NavBar-B3" >
+        <div className="NavBar-B3B1" onClick={() => setCartStatus(true)}>
+          <CartWidget />
+        </div>
       </div>
     </div>
   );

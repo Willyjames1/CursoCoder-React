@@ -1,0 +1,42 @@
+.CheckoutOrderSent-background {
+  background-color: rgb(64, 64, 64, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.CheckoutOrderSent-container {
+  background-color: white;
+  height: 80%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 10vh;
+  align-content: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.CheckoutOrderSent-container-Btn {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckoutOrderSent-container-Btn1 {
+  color: gray;
+}
+
+.CheckoutOrderSent-container-Btn1:hover {
+  color: rgb(72, 72, 72);
+  text-decoration: underline;
+}

@@ -1,7 +1,15 @@
+.product-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .product-div-container {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    border: 2px darkcyan;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: auto auto;
+  grid-row-gap: 3vh;
+  justify-content: space-around;
 }

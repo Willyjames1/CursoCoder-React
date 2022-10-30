@@ -1,37 +1,45 @@
 import Item from "../Item/Item";
 import "./ItemList.css"
-import { fundas } from "../Data/data";
 import { useEffect, useState } from "react";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+
+
 const ItemList = () => {
-    const [loading, setLoading] = useState(false)
 
-
+    const [data, setData] = useState([])
 
     useEffect(() => {
-        setTimeout(() => {
-            setLoading(true)
-        }, 2000);
+        const queryDB = getFirestore()
+        const queryCollection = collection(queryDB, 'productos')
+        getDocs(queryCollection)
+            .then((res) => setData(res.docs.map((product) => ({ id: product.id, ...product.data() }))))
     }, [])
 
-    return (
-        <>{loading && <div className="product-div-container">
-            {fundas.map((producto) => {
-                return (
 
-                    <div key={producto.id}>
+    const loader = <div className="loader" ></div>
+
+
+
+    return (
+        <div className="product-background">
+
+            {data.length > 0 ? <div className="product-div-container">
+                {data.map((product) =>
+
+                    <div key={product.id}>
 
                         <Item
-                            nombre={producto.nombre}
-                            img={producto.img}
-                            id={producto.id}
-                            precio={producto.precio}
-                            modelo={producto.modelo}
+                            nombre={product.nombre}
+                            img={product.img}
+                            id={product.id}
+                            precio={product.precio}
+                            modelo={product.modelo}
                         />
                     </div>
-                );
-            })
-            }
-        </div>}</>
+                )}
+            </div> : loader}
+
+        </div>
     )
 }
 

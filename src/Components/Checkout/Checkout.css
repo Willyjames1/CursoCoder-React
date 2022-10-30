@@ -1,0 +1,67 @@
+.Checkout-background {
+  background-color: rgb(10, 40, 100, 0.25);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.Checkout-container {
+  background-color: rgb(205, 133, 63);
+  height: 80%;
+  width: 50%;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.Checkout-btnClose {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Checkout-btnClose1 {
+  height: 3.5vh;
+  width: auto;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.Checkout-tittle {
+  display: flex;
+  justify-content: center;
+}
+
+.Checkout-form {
+  display: grid;
+  grid-template-columns: 90%;
+  grid-template-rows: repeat(12, 1fr);
+  background-color: rgb(215, 215, 215);
+  height: 70%;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.Checkout-product-total {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5vh;
+  color: white;
+}
+
+.Checkout-product-BackBtn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.Checkout-product-Btn {
+  font-size: 18px;
+}
